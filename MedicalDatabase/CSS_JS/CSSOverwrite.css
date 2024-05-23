@@ -1,0 +1,339 @@
+body {
+    background-color: #CAF0F8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    background-color: #0077B6;
+}
+
+#newPatientBtn {
+    background-color: #00b4d8;
+    border-radius: 7px;
+    color: white;
+}
+
+#patientListBtn {
+    background-color: #00b4d8;
+    border-radius: 7px;
+    color: white;
+    margin-right: 1rem;
+}
+
+#genContTitleBar {
+    /*background-color: #E9F1FA;*/
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#genContSubCont {
+    margin-left: 1rem;
+    margin-top: 4rem;
+}
+
+#titlebar {
+    background-color: #00B4D8;
+    color: #ffffff;
+    border-top-left-radius: 10px;
+    font-size: larger;
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+#patientOccupDeetsHeading {
+    background-color:#90E0EF;
+    border-top-left-radius: 10px;
+    font-size: large;
+    color: #015684;
+}
+
+#patientInfoTableHeading {
+    background-color:#90E0EF;
+    border-top-right-radius: 10px;
+    font-size: large;
+    color: #015684;
+}
+
+#OccupIDNoLabel {
+    padding-left: 1rem;
+    background-color: #90E0EF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#PatientIDNo {
+    background-color: #a5e8f4;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.leftCont {
+    background-color:#CAF0F8;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 1.4rem;
+    margin-right: 2rem;
+    color: #0077B6;
+}
+
+.rightCont {
+    background-color:#CAF0F8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 0rem;
+}
+
+#patientOccupDeets {
+    padding: 1rem;
+}
+
+#patientOccupCont {
+    background-color: #90e0ef;
+    padding: 1rem;
+    line-height: 160%;
+    border-radius: 5px;
+}
+
+#patientDeetsVS {
+    background-color: #00B4D8;
+    color: white;
+    border:#00B4D8 groove 4px;
+    border-top-left-radius: 10px;
+}
+
+#checkInDeets {
+    background-color: #00B4D8;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: #015684 dotted 2px;
+}
+
+#checkInList {
+    background-color: #90e0ef;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#checkInListBtns {
+    border-radius: 10px;
+}
+
+#patientInfoTable {
+    margin-left: 0rem;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
+    color: #015684;
+}
+
+#RowName {
+    background-color:#00b4d8;
+    border-top: dotted 2px #015684;
+    border-left: dotted 2px #015684;
+    border-right: dotted 2px #015684;
+}
+
+#RowData {
+    background-color:#90e0ef;
+    color: #0077B6;
+    border-top: dotted 2px #015684;
+    border-right: dotted 2px #015684;
+}
+
+#RowNameTopLeft {
+    background-color: #00B4D8;
+    border-top-left-radius: 10px;
+    border-top: dotted 2px #015684;
+    border-left: dotted 2px #015684;
+    border-right: dotted 2px #015684;
+}
+
+#RowDataTopRight {
+    background-color: #90e0ef;
+    border-top-right-radius: 10px;
+    color: #0077B6;
+    border-top: dotted 2px #015684;
+    border-right: dotted 2px #015684;
+}
+
+#RowNameBottomLeft {
+    background-color: #00B4D8;
+    border-bottom-left-radius: 10px;
+    border: dotted 2px #015684;
+}
+
+#RowDataBottomRight {
+    background-color: #90e0ef;
+    border-bottom-right-radius: 10px;
+    color: #0077B6;
+    border-top: dotted 2px #015684;
+    border-right: dotted 2px #015684;
+    border-bottom: dotted 2px #015684;
+}
+
+#buttonGroup {
+    margin-top: 2.3rem;
+}
+
+#buttonGroupVS {
+    margin-top: 1.3rem;
+}
+
+.buttonGroup {
+    background-color: #00b4d8;
+    color: white;
+}
+
+#pgButtons1 {
+    position: absolute;
+    right: 17rem;
+}
+
+#pgButtons2 {
+    position: absolute;
+    right: 11rem;
+}
+
+#pgButtons3 {
+    position: absolute;
+    right: 5rem;
+}
+
+#docsNote {
+    background-color:#00B4D8;
+    padding: 0.8rem;
+    margin-left: 2.5rem;
+    width: 92%;
+    border-radius: 10px;
+}
+
+.overlay{
+    display: none;
+    opacity:0.8;
+    background-color:#000000;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
+
+.confirmBtns {
+    margin-top: 2%;
+    border: #caf0f8 2px solid;
+    background-color: #0077B6;
+    color: white;
+}
+
+
+#cancelConfirmBtn {
+    margin-left: 55%;
+}
+
+#deleteConfirm {
+    display: none;
+    background-color: #00B4D8;
+    color: white;
+    width: 550px;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#addVSConfirm {
+    display: none;
+    background-color:#00B4D8;
+    color: white;
+    width: 550px;
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+#AddVSConfirmMessage {
+    text-align: center;
+    padding: 10px 30px;
+}
+
+
+#deleteConfirmMessage {
+    text-align: left;
+    line-height: 150%;
+    padding-bottom: 5px;
+}
+
+
+#SearchBarResults {
+    background-color:#00b4d8;
+    display: none;
+    left: 100px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.SearchBarPatients {
+    text-decoration: none;
+    display: none;
+    color: white;
+    margin-top: 0.2rem;
+}
+
+.searchListIDNo {
+    padding: 0rem;
+    margin: 0rem;
+    margin-bottom: 0.5rem;
+    width: 30%;
+    background-color:#52cce5;
+    border-radius: 5px; 
+       
+}
+
+.searchListName {
+    padding: 0rem;
+    margin: 0rem;
+    margin-bottom: 0.5rem;
+    margin-left: 2%;
+}
+
+.searchListAdd {
+    padding: 0rem;
+    margin: 0rem;
+    margin-bottom: 0.5rem;
+    background-color:#0077B6;
+    text-align: center;
+    border-radius: 10px;
+    width: 5%;
+}
+
+.indexListNames {
+    text-decoration: none;
+    color:#015684;
+    padding: 5px;
+    margin-top: 1px;
+    width: 100%;
+    background-color: #CAF0F8;
+}
+
+.indexName{
+    text-decoration: none;
+}
+
+.accordion-button{
+    background-color: #CAF0F8;
+}
+
+.accordion-button:active{
+    background-color: #CAF0F8;
+    color: white;
+}
+
+.accordion-button:focus{
+    background-color:#90e0ef;
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #90E0EF;
+    color: white;
+}

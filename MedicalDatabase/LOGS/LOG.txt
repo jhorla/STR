@@ -1,0 +1,238 @@
+3604696
+Password:	AE9EYM7
+
+
+1631 22Dec2023:
+  Update and display page for patientinfo is working well
+
+1637 22Dec2023:
+  Transferring from vitalsigns.php to patientinfo.php page is working with specific patient
+
+1707 22Dec2023:
+  EditVitalSigns is working (does not save progress when switching to another checkin)
+
+1710 22Dec2023:
+  Starting edit of index.php (go to previous ver to retrieve hard-coded list)
+
+1826 22Dec2023:
+  Patient List Includes Occupations (Student/Faculty), and student grades (working)
+
+1846 22Dec2023:
+  Occupations, Student Grades, Student Sections dropdowns completed
+
+1932 22Dec2023:
+  Patient List in completed
+  Error: what if walang check in ang bata? there is no $recentCheckIn for the patientinfo.php page
+
+1659 24Dec2023:
+  Update on patientinfo.php:
+  if-else statement on href leading to vitalsigns.php (if there is no check-in, return null value on passed value to vitalsigns.php, else pass most recent check in)
+  changed $patientInfo on vitalsigns (referencing vitalsigns table was irrelevant)
+
+  1637 I'm literally going to fmita
+
+  fixed the fucking problem with the dynamic dropdown (if hindi siya natouch on the update page null yung value niya and the grade would be the grade mismo not the id)
+
+1655 27Dec2023
+  Update on AddVitalSigns.php:
+  - manual incrementing for IDs in vital signs and checkins tables (checkins.CheckIn_ID = VitalSigns.VitalSigns_ID)
+  Update on vitalsigns.php:
+  - updated $displayedCheckIn from "SELECT * FROM checkins..." to "SELECT * FROM vitalsigns..." kasi yung CheckInID pertained to the latter is directed towards checkin count of a person
+    it only affects the $displayedVitals lang naman and so far there are no errors in testing...
+
+1711 27Dec2023
+  Program is working based on expected performance so far
+  Comments:
+  - EditVitalSigns.php needs editing based on changes with AddVitalSigns.php
+  - Delete functions should be added
+
+1745 27Dec2023
+  Update on vitalsigns.php:
+  - $patient var (only affects $CheckInID which determines checkin no. of a specific person) was NOT changed because the $CheckInID is based on the vitalsigns table's CheckIn_ID col (which is the check in of a specific person)
+  - $displayedVitals edited because it returned wrong array
+
+  Update on EditVitalSigns.php:
+  - updated $CheckIns from that in vitalsigns.php
+
+1746 27Dec2023 [NO EDITS, NO COPY]
+  Plan for delete function:
+    - in patientinfo.php, if a person is removed from the db, ensure that all corresponding to their Patient_ID is removed as well
+    - in vitalsigns.php, on a specific check-in corresponding to that person, their info is deleted in vitalsigns table and checkins table
+    - DO NOT add delete functions on edit pages because it might send the wrong intuitions (confused with cancelling an edit)
+
+1536 28Dec2023
+  Update on patientinfo.php:
+    - added a delete button that has a confirm box pop-up (not functional YET)
+
+1557 28Dec2023
+  Update on patientinfo.php:
+    - functional delete button with confirm pop-up
+  Update on database.php:
+    - renamed delete() function to deletefromtable() because the former is already an existing function
+
+1926 30Dec2023
+  IMPORTANT NOTES:
+    $displayedCheckIn['CheckIn_ID'] in vitalsigns.php and $priorinfo['CheckIn_ID'] in EditVitalSigns.php pertains to a SPECIFIC person's
+  Update on vitalsigns.php:
+    - additional prerequisites on when the person confirms the deletion of data on a check-in
+    - edit $displayedCheckIn to include check in date and time
+    - display check in date and time
+    - an attempt at, when deleting a check-in in between two existing, make the counting linear
+  Update on EditVitalSigns.php:
+    - updated $priorInfo to incl. check in date and time
+    - put inputs for updating check in time and dates
+    - included updating for check in times and dates
+
+0230 01Jan2024
+  Update on vitalsigns.php:
+  - attempt at using session to remove repetition of deletefromtable() execution (I don't understand why it's essentially like the other written functions tho)
+
+1023 08Jan2024
+  Update on database.php:
+  - I am giving up and modifying the deletefromtable() function by removing the try catch
+  Update on vitalsigns.php:
+  - remove session shit
+  - I just moved the block of code of deleting to the start.. yun lang yung problema with modifying header information
+
+1434 08Jan2024
+  Update on vitalsigns.php:
+  - change goofy loop changing checkins
+  might code on phone kasi lobat
+
+1008 09Jan2024
+  Update on vitalsigns.php:
+  - notes on how to fix loop
+
+1019 09Jan2024
+  Update on vitalsigns.php:
+  - check-in deleting is smooth-flowing na (with notes)
+
+1022 09Jan2024
+  Update on vitalsigns.php:
+  - same as 1019 ver but no notes and console logging on vitalsigns
+
+1028 09Jan2024 [NO COPY]
+  patientinfo.php:
+  - fixed header information problem (move block of code)
+
+  index.php
+  - give id to listed students #patient
+  - onkeyup on searchbar
+
+1053 16Jan2024
+  atp it's just a copy of the init searchbar func
+
+1346 16Jan2024
+  another att.
+
+1536 17Jan2024
+  HOLY SHSJJVSV IT'S WORKING (only prob now is that it shows the whole list when the input is empty)
+
+1558 17Jan2024
+  searchbar function is FULLY WORKING LET'S GOOOO
+
+0841 18Jan2024
+  creating a JS file for vitalsigns.php and patientInfo.php to make the deleteconfirm one shared function
+  fixing the appearance of the search results underneat the searchbar in index.php
+  transfer of search function to js file
+    - incl. $patient for every file
+
+1047 07Feb2024
+  patientinfo:
+    manipulated z-indicces
+    fixed z-index issue by transferring pop up to the top of overlay
+  vitalsigns:
+    z-index fix
+    list-group for checkins
+  EditVitalSigns
+    list-group
+
+1143 07Feb2024
+  * lay out CSS kasi paid pala yung mga packs
+
+  Color scheme:
+    Blue Shades and White
+      Light blue (#E9F1FA)
+      Bright blue (#00ABE4)
+      White (#FFFFFF)
+    https://www.hostinger.ph/tutorials/website-color-schemes
+
+
+Other Updates:
+  > AddVitalSigns.php, add <form action="" method="POST"> after line 125
+
+CSS:
+Color scheme:
+    Blue Shades and White
+      Light blue 1 (#E9F1FA)
+      Bright blue (#00ABE4)
+      White (#FFFFFF)
+    https://www.hostinger.ph/tutorials/website-color-schemes
+
+    Hex Codes: #015684 // #03045e // #0077b6 // #00b4d8 // #90e0ef // #caf0f8
+    https://coolors.co/palette/03045e-0077b6-00b4d8-90e0ef-caf0f8
+
+    https://venngage.com/blog/blue-color-palettes/
+
+Patient Info Pages:
+> give  id="patientOccupDeetsHeading"  to "Heading" for occupation deets
+> give  id="patientOccupDeets"  to container for occupation deets
+
+> set id="titlebar" in title bars e.g.: Patient info
+  > index.php
+  > patientinfo.php
+  > vitalsigns.php
+  > AddVS
+  > EditVS
+> remove bootstrap padding in title bars
+  > index.php
+  > patientinfo.php
+> remove styles="     :..." in HTMLs to overwrite CSS
+> remove 'personID' tag in searchbar
+  > patientinfo.php
+  > vitalsigns.php
+  > index.php
+  > AddVS
+  > EditVS
+> change nav buttons: add ids to buttons
+  > patientinfo.php
+  > vitalsigns.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V1.54:
+> V1.53 but addressed issues
+  > dropdown list where the sections in 11 and 12 are treated the same (click on 11A and 12A is also 'clicked')
+  > clicking on patient in patient list always goes to the first one listed
+
+V1.55:
+> Easier directory to AddVitalSigns (it's in the searchlist now YEY)
+
+V1.56:
+> Fixed bug: dropdown of units and sections for update page for patient info is fixed (all are displayed instead of just the max)
+> Fixed bug: "unavailable" dropdown for sections for update page for patient info when patient is student
+
+V1.57:
+> All dropdowns function well + added disabled func for dropdown in faculty sections
+> Added "0" as an ID for "None" in tables to replace NULL
+> NOTE: DB was reset
+
+V1.58:
+> Fixed bug with faculty dropdown
+-- Final Revision
